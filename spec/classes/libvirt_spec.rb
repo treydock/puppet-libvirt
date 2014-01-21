@@ -18,9 +18,7 @@ describe 'libvirt', :type => :class do
   let(:title) { 'libvirt' }
 
   it { should contain_class('libvirt') }
-  it { should contain_file('/etc/libvirt/qemu/networks/autostart/default.xml') 
-       .with_ensure('absent')
-  }
+  it { should contain_file('/etc/libvirt/qemu/networks/autostart/default.xml').with_ensure('absent') }
 
   describe 'with default network enabled' do
     let(:params) {{ :defaultnetwork => true }}

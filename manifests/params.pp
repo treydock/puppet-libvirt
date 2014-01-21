@@ -32,6 +32,7 @@ class libvirt::params {
       $virtinst_package = 'python-virtinst'
       $radvd_package = 'radvd'
       $sysconfig = false
+      $default = false
     }
   }
 
